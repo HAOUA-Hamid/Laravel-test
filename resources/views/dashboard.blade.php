@@ -1,17 +1,15 @@
 <x-app-layout>
-    <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Dashboard') }}
-        </h2>
-    </x-slot>
-    <livewire:booking-manager />
-    <div class="py-12">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
-                <div class="p-6 text-gray-900">
-                    {{ __("You're logged in!") }}
-                </div>
-            </div>
+    <div class="max-w-7xl mx-auto p-6">
+        <h1 class="text-3xl font-bold text-primary mb-6">Welcome to Your Dashboard</h1>
+
+
+        <div class="mb-6">
+            <a href="{{ route('properties') }}" class="text-secondary hover:underline text-lg">View Available Properties</a>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg shadow-md">
+            <h2 class="text-2xl font-semibold mb-4">Make a Booking</h2>
+            <livewire:booking-manager />
         </div>
     </div>
 </x-app-layout>
